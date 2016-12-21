@@ -19,6 +19,17 @@ import org.slf4j.LoggerFactory;
 
 import uk.ac.diamond.scisoft.analysis.io.LoaderFactory;
 
+
+public class HelloOpenCV {
+	public static Logger logger = LoggerFactory.getLogger(HelloOpenCV.class);
+	public static void main(String[] args) {
+		System.out.println("Hello, OpenCV");
+
+		// Load the native library.
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		new DetectFaceDemo().run();
+	}
+}
 //
 // Detects faces in an image, draws boxes around them, and writes the results
 // to "faceDetection.png".
@@ -70,13 +81,3 @@ class DetectFaceDemo {
 	}
 }
 
-public class HelloOpenCV {
-	public static Logger logger = LoggerFactory.getLogger(HelloOpenCV.class);
-	public static void main(String[] args) {
-		System.out.println("Hello, OpenCV");
-
-		// Load the native library.
-		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-		new DetectFaceDemo().run();
-	}
-}

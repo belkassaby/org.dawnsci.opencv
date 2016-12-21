@@ -4,6 +4,9 @@ Bundle-Name: Opencv
 Bundle-SymbolicName: org.dawnsci.opencv
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.dawnsci.opencv.Activator
-Require-Bundle: org.eclipse.core.runtime
+Require-Bundle: org.eclipse.core.runtime,
+ slf4j.api,
+ org.eclipse.dawnsci.analysis.api,
+ uk.ac.diamond.scisoft.analysis
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
